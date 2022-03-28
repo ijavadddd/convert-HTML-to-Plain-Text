@@ -1,0 +1,22 @@
+{% include 'base.html' %}
+{% load static %}
+{% block head %}
+    <title>Html convertor</title>
+{% endblock head %}
+
+{% block body %}
+<div class="container-fluid">
+    <div class="container">
+       <div class="convertor-container w-75 bg-white rouned shadow-sm m-auto mt-4 px-3 px-2">
+            <h1>Convert HTML code To Text</h1>
+            <form action="" method="post" class="my-3">
+                {% csrf_token %}
+                {{convertor_form.HtmlCode}}
+                <input type="submit" value="Convert" class="my-btn btn btn-success d-inline-block">
+            </form>
+       </div>
+    </div>
+</div>
+{% endblock body %}
+
+{% block script %}{% endblock script %}
